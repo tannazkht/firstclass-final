@@ -28,18 +28,26 @@
             ریزی دقیق از رقباشون سبقت بگیرند توصیه می شود.
           </span>
           </div>
+          <div class="icons-responsive">
+            <div class="icon-subtitle">
+              <img src="../assets/images/icons/time.svg" alt="clock icon">
+              <span class="icon-subtitle"><strong>۳ ساعت</strong><br>مدت هر جلسه</span>
+            </div>
+            <div class="icon-subtitle">
+              <img src="../assets/images/icons/jalasat.svg" alt="person icon">
+              <span class="icon-subtitle"><strong>۵۰ جلسه</strong><br>آموزشی</span>
+            </div>
+            <div class="icon-subtitle">
+              <img src="../assets/images/icons/free.svg" alt="free icon">
+              <span class="icon-subtitle"><strong>رایگان</strong><br>برای همه دانش آموزان</span>
+            </div>
+            <div class="icon-subtitle">
+              <img src="../assets/images/icons/moshavere.svg" alt="chat icon">
+              <span class="icon-subtitle"><strong>۱۶ جلسه</strong><br>مشاوره و برنامه ریزی</span>
+            </div>
+          </div>
           <a href="#" class="sign-up-button">ثبت نام رایگان</a>
           </div>          
-          <div class="icons-responsive">
-              <img src="../assets/images/icons/time.svg" alt="clock icon">
-              <p class="icon-subtitle"><strong>۳ ساعت</strong><br>مدت هر جلسه</p>
-              <img src="../assets/images/icons/jalasat.svg" alt="person icon">
-              <p class="icon-subtitle"><strong>۵۰ جلسه</strong><br>آموزشی</p>
-              <img src="../assets/images/icons/free.svg" alt="free icon">
-              <p class="icon-subtitle"><strong>رایگان</strong><br>برای همه دانش آموزان</p>
-              <img src="../assets/images/icons/moshavere.svg" alt="chat icon">
-              <p class="icon-subtitle"><strong>۱۶ جلسه</strong><br>مشاوره و برنامه ریزی</p>
-          </div>
           <img class="dynamic-student" src="../assets/images/character_min.png" alt="dynamic-student-image">
       </div>
   </section>
@@ -74,7 +82,7 @@ export default {
 }
 @keyframes dynamicStudent {    
   0% {bottom: 50px;}
-  50% {bottom: 80px;}
+  50% {bottom: 70px;}
   100% {bottom: 50px;}
 }
 * {
@@ -107,10 +115,7 @@ section {
         }
     }
     .main {
-        // @include horizontal-center();
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
+        @include horizontal-center();
         background-color: #97979733;
         backdrop-filter: blur(4px);
         position: relative;
@@ -182,8 +187,23 @@ section {
             // }
           }
         }
-        .icons-responsive {
-            display: none;
+        .icons-responsive {  
+          display: none;
+          .icon-subtitle {
+            @include vertical-center();
+            img {
+                width: 25px;
+                height: auto;
+            }                    
+            .icon-subtitle {
+                font-size: 10px;
+                direction: rtl;
+                text-align: center;
+                strong {
+                    font-size: 13px;
+                }
+            }
+          }
           }
         .dynamic-student {
             position: absolute;
@@ -192,7 +212,7 @@ section {
             width: 270px;
             height: auto;
             animation-name: dynamicStudent;
-            animation-duration: 4.5s;
+            animation-duration: 3.5s;
             animation-iteration-count: infinite;
         }
     }
@@ -209,66 +229,89 @@ section {
         }
     }
     .diamond-img {
-      top: 40px;
+      top: 10px;
         img {
             width: 80px;
             height: auto;
         }
     }
     .main {
-      justify-content: space-around;
-      bottom: 0px;
       width: 90%;
       height: 700px;
-      h1 {
-        font-size: 20px;
-        margin-top: 2px;
+      .icons {
+        display: none;
       }
-      .icons-and-description {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        .icons {
-          display: none;
+      .header-description {
+        right: 0;
+        h1 {
+          font-size: 20px;
         }
         .description {
-          display: flex;
-          margin-right: 0;
-          width: 90%;
-          span {
-            font-size: 15px;
-          }
+          width: 80%;
         }
-        .icons-responsive { 
-          padding: 5%;
-          margin: 5% 0 20%;
-          display: block; 
-          @include vertical-center(); 
-          flex-wrap: wrap;          
-          width: 230px;
-          height: 220px;
-          img {
-              width: 30px;
-              height: auto;
-          }                    
-          .icon-subtitle {
-              font-size: 10px;
-              direction: rtl;
-              text-align: center;
-              strong {
-                  font-size: 11px;
-              }
-          }
-        } 
-      }  
-        .sign-up-button {
-          position: fixed;
-          bottom: 25px;
+        .icons-responsive {
+          // display: block;
         }
+      }
     }
+    // .main {
+    //   justify-content: space-around;
+    //   bottom: 0px;
+    //   width: 90%;
+    //   height: 700px;
+    //   h1 {
+    //     font-size: 20px;
+    //     margin-top: 2px;
+    //   }
+    //   .icons-and-description {
+    //     display: flex;
+    //     flex-direction: column;
+    //     align-items: center;
+    //     .icons {
+    //       display: none;
+    //     }
+    //     .description {
+    //       display: flex;
+    //       margin-right: 0;
+    //       width: 90%;
+    //       span {
+    //         font-size: 15px;
+    //       }
+    //     }
+    //     .icons-responsive { 
+    //       padding: 5%;
+    //       margin: 5% 0 20%;
+    //       display: block; 
+    //       @include vertical-center(); 
+    //       flex-wrap: wrap;          
+    //       width: 230px;
+    //       height: 220px;
+    //       img {
+    //           width: 30px;
+    //           height: auto;
+    //       }                    
+    //       .icon-subtitle {
+    //           font-size: 10px;
+    //           direction: rtl;
+    //           text-align: center;
+    //           strong {
+    //               font-size: 11px;
+    //           }
+    //       }
+    //     } 
+    //   }  
+    //     .sign-up-button {
+    //       position: fixed;
+    //       bottom: 25px;
+    //     }
+    // }
     .dynamic-student {
         display: none;
     }
 }
+}
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+}
+@media only screen and (min-width: 1024px) {
 }
 </style>
