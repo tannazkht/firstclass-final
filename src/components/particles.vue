@@ -131,6 +131,7 @@
     display: flex;
     background: rgb(9, 2, 58);
     width: 100%;
+    /* height: 900px; */
     height: 100%;
 }
 </style>

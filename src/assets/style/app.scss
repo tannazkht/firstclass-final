@@ -51,13 +51,14 @@ section {
     }
     .main {
         @include vertical-center();
-        background-color: #97979733;
+        // background-color: #97979733;
+        background-image: linear-gradient(180deg, rgba(3,106,245,0.09) 0%, rgba(255,255,255,0.11) 18%, rgba(255,255,255,0.08) 100%);
         backdrop-filter: blur(4px);
         position: relative;
         bottom: 30px;
         width: 66%;
         height: 450px;
-        border: 2px solid #3b8eb1;
+        border: 2px solid #3b8eb187;
         border-radius: 15px;
         h1 {
             color: #ffffff;
@@ -74,7 +75,7 @@ section {
               @include vertical-center();             
               width: 200px;
               height: 200px;
-              margin: 0 15% 0 5%;
+              margin: 0 15% 0 10%;
                 img {
                     width: 25px;
                     height: auto;
@@ -91,7 +92,7 @@ section {
             }
             .description {
                 display: flex;
-                width: 80%;
+                width: 90%;
                 margin-bottom: 20px;
                 span {
                       direction: rtl;
@@ -107,18 +108,20 @@ section {
         .sign-up-button {
         @include horizontal-center();
         background-image: linear-gradient(180deg, #FFD843 0%, #FFAF20 100%);
-        box-shadow: 0 14px 28px 0 rgba(255,175,32,0.30);
         border-radius: 44.5px;
         width: 220px;
         height: 50px;
         text-decoration: none;
         font-size: 15px;
         font-weight: bold;
-        color: #000000;
+        color: #000000;        
+        &:hover {
+            background-image: linear-gradient(180deg, #ffd633 0%, #ffa60d 100%);
+            box-shadow: 0 14px 28px 0 rgba(255,175,32,0.30);
+            color: #ffffff;
         }
-        // .sign-up-button :hover {
-            
-        // }
+        }
+
         .dynamic-student {
             position: absolute;
             left: 69.5%;
@@ -200,7 +203,7 @@ section {
         }
     }
     .main {
-        width: 80%;
+        width: 85%;
     }
 }
 }
