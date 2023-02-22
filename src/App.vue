@@ -10,7 +10,7 @@ import FirstClass from './components/FirstClass.vue'
 export default {
   name: 'App',
   components: {
-    FirstClass
+    FirstClass,
   }
 }
 </script>
