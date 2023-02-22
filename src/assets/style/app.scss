@@ -28,11 +28,11 @@ body {
     font-family: IranSans;
 }
 #particles-js {
-    z-index: -1;
+    background: rgb(9, 2, 58);
 }
 section {
+    position: absolute;
     @include vertical-center();
-    z-index: 1;
     .header {
         margin-top: 25px;
         z-index: 1;

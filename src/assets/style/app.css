@@ -24,15 +24,15 @@ body {
 }
 
 #particles-js {
-  z-index: -1;
+  background: rgb(9, 2, 58);
 }
 
 section {
+  position: absolute;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  z-index: 1;
 }
 section .header {
   margin-top: 25px;
