@@ -23,14 +23,6 @@ body {
   font-family: IranSans;
 }
 
-#particles-js {
-  position: absolute;
-  display: flex;
-  background: rgb(9, 2, 58);
-  width: 100%;
-  height: 100%;
-}
-
 section {
   position: absolute;
   display: flex;
