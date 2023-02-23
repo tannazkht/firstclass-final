@@ -155,8 +155,7 @@ section {
       width: 90%;
       height: 670px;
       h1 {
-        position: relative;
-        bottom: 30px;
+        margin-top: 25px;
         font-size: 23px;
       }
       .icons-and-description {
@@ -164,19 +163,21 @@ section {
         margin-right: 0%;
         .icons {
             order: 1;
-            margin: 5px 10px;
+            margin: 100px 5px 0;
             flex-wrap: wrap;
             width: 250px;
             height: 170px;
         }
         .description {
             order: 0;
-            margin-top: 25px;
+            margin-top: 30px;
         }
       }
     .sign-up-button {
-        position: fixed;
-        bottom: 15px;
+        // order: 1;
+        position: relative;
+        bottom: 270px;
+        width: 280px;
     }
     .dynamic-student {
         display: none;
